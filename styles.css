@@ -12,6 +12,20 @@
 
 :root {
   line-height: 1.5;
+
+  --text-color: black;
+  --error-color: #ff6b6b;
+  --border-color: #E5E7EB;
+  --focus-color: #2563eb;
+
+  --font-size-small: 1rem;
+  --font-size-main: 1.4rem;
+  --font-size-large: 2rem;
+
+  --small-padding: 24px;
+  --medium-padding: 48px;
+  --large-padding: 64px
+
 }
 
 h1, h2, h3, h4, h5, figure, p, ol, ul {
@@ -34,31 +48,31 @@ img {
 }
 
 body{
-    font-family: Roboto, sans-serif;
-    min-height: 100vh;
-    display: flex;
+  font-family: Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
 }
 
 .bg-container{
-    flex: 1;
-    display: flex;
-    background-image: url(images/photo-1585202900225-6d3ac20a6962.avif);
-    background-size:  cover;
-    position: relative;
-    color:white;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  background-image: url(images/photo-1585202900225-6d3ac20a6962.avif);
+  background-size:  cover;
+  position: relative;
+  color:white;
+  justify-content: center;
 }
 
 .bg-logo{
-    display: flex;
-    background-color: rgb(0 0 0 / 60%);
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 25%;
-    width: 100%;
-    padding: 16px 0px;
-    gap:1rem;
+  display: flex;
+  background-color: rgb(0 0 0 / 60%);
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  padding: 16px 0px;
+  gap:1rem;
 }
 
 .bg-logo img{
@@ -68,7 +82,7 @@ body{
 
 .logo-text{
     font-family: Norse, sans-serif;
-    font-size: calc(5rem + 1vw);
+    font-size: 5rem;
 }
 
 .copyright{
@@ -78,6 +92,18 @@ body{
 }
 .form-container{
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:var(--small-padding);
+    padding: var(--large-padding);
 }
 
+.header{
+  font-size: var(--font-size-main);
+  font-weight: 700;
+}
 
+.header h1{
+  margin-bottom: var(--small-padding);
+}
