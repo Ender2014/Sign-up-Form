@@ -1,8 +1,13 @@
 @import "modern-normalize";
 
 @font-face{
-    font-family: roboto;
+    font-family: Roboto;
     src: url(recources/roboto-regular-webfont.woff2);
+}
+
+@font-face{
+    font-family: Norse;
+    src: url(recources/norse-bold-webfont.woff2);
 }
 
 :root {
@@ -27,3 +32,52 @@ img {
   display: block;
   max-inline-size: 100%;
 }
+
+body{
+    font-family: Roboto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+}
+
+.bg-container{
+    flex: 1;
+    display: flex;
+    background-image: url(images/photo-1585202900225-6d3ac20a6962.avif);
+    background-size:  cover;
+    position: relative;
+    color:white;
+    justify-content: center;
+}
+
+.bg-logo{
+    display: flex;
+    background-color: rgb(0 0 0 / 60%);
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    padding: 16px 0px;
+    gap:1rem;
+}
+
+.bg-logo img{
+    width: min(100px, 100%);
+	height: min(100px, 100%);
+}
+
+.logo-text{
+    font-family: Norse, sans-serif;
+    font-size: calc(5rem + 1vw);
+}
+
+.copyright{
+    position:absolute;
+    bottom: 2rem;
+    font-size: 1rem;
+}
+.form-container{
+    flex: 2;
+}
+
+
