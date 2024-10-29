@@ -18,10 +18,10 @@
   --border-color: #E5E7EB;
   --focus-color: #2563eb;
 
-  --font-size-small: 1rem;
+  --font-size-small: 0.9rem;
   --font-size-main: 1.4rem;
   --font-size-large: 2rem;
-
+  
   --small-padding: 24px;
   --medium-padding: 48px;
   --large-padding: 64px
@@ -47,6 +47,14 @@ img {
   max-inline-size: 100%;
 }
 
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
 body{
   font-family: Roboto, sans-serif;
   min-height: 100vh;
@@ -54,7 +62,7 @@ body{
 }
 
 .bg-container{
-  flex: 1;
+  flex: 2;
   display: flex;
   background-image: url(images/photo-1585202900225-6d3ac20a6962.avif);
   background-size:  cover;
@@ -76,22 +84,22 @@ body{
 }
 
 .bg-logo img{
-    width: min(100px, 100%);
+  width: min(100px, 100%);
 	height: min(100px, 100%);
 }
 
 .logo-text{
-    font-family: Norse, sans-serif;
-    font-size: 5rem;
+  font-family: Norse, sans-serif;
+  font-size: 5rem;
 }
 
 .copyright{
     position:absolute;
     bottom: 2rem;
-    font-size: 1rem;
+    font-size: var(--font-size-small);
 }
 .form-container{
-    flex: 2;
+    flex: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,7 +107,7 @@ body{
     padding: var(--large-padding);
 }
 
-.header{
+.header, .form-header{
   font-size: var(--font-size-main);
   font-weight: 700;
 }
@@ -107,3 +115,23 @@ body{
 .header h1{
   margin-bottom: var(--small-padding);
 }
+
+.form-content{
+  display: flex;
+  font-size: var(--font-size-small);
+}
+
+input{
+  border:1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 4px 8px;
+  
+}
+
+input:focus{
+  border-color: var(--focus-color);
+}
+
+/*input:invalid{
+  border-color: var(--error-color);
+}*/
