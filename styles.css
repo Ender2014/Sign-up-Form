@@ -59,6 +59,7 @@ body{
   font-family: Roboto, sans-serif;
   min-height: 100vh;
   display: flex;
+  box-sizing: border-box;
 }
 
 .bg-container{
@@ -104,34 +105,47 @@ body{
   flex-direction: column;
   justify-content: center;
   gap:var(--small-padding);
-  padding: var(--large-padding);
 }
 
 .header, .form-header{
   font-size: var(--font-size-main);
   font-weight: 700;
+  padding:0px var(--large-padding);
 }
 
-.header h1{
+.header h1, .form-header h1{
   margin-bottom: var(--small-padding);
 }
 
 .form-content{
   font-size: var(--font-size-small);
   display: flex;
+  gap: var(--large-padding);
+  padding:0px var(--large-padding);
+  box-shadow: 0 4px 10px -4px black;
+}
+
+.form-row{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--small-padding);
 }
 
 input{
   border:1px solid var(--border-color);
   border-radius: 6px;
   padding: 4px 8px;
-  
+  width: 250px;
+  height: initial;
 }
 
 input:focus{
+  outline: #2563eb;
   border-color: var(--focus-color);
+  box-shadow: 0 4px 4px -4px var(--focus-color);
+
 }
 
-/*input:invalid{
+input:invalid{
   border-color: var(--error-color);
-}*/
+}
