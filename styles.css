@@ -152,9 +152,15 @@ input:focus{
   box-shadow: 0 4px 4px -4px var(--focus-color);
 
 }
+.warning {
+  color: red;
+  margin-top: 5px;
+  display: none; /* Hide the warning by default */
+}
 
-input:invalid{
+input[type="password"]:invalid + .warning{
   border-color: var(--error-color);
+  display: block;
 }
 
 .form-submit{
