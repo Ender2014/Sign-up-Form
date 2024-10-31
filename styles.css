@@ -17,6 +17,7 @@
   --error-color: #ff6b6b;
   --border-color: #E5E7EB;
   --focus-color: #2563eb;
+  --button-clor: #596D48;
 
   --font-size-small: 0.9rem;
   --font-size-main: 1.4rem;
@@ -27,6 +28,7 @@
   --large-padding: 64px
 
 }
+
 
 h1, h2, h3, h4, h5, figure, p, ol, ul {
   margin: 0;
@@ -53,6 +55,10 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
+}
+
+a:hover, button:hover{
+  cursor: pointer;
 }
 
 body{
@@ -123,6 +129,7 @@ body{
   gap: var(--large-padding);
   padding:0px var(--large-padding);
   box-shadow: 0 4px 10px -4px black;
+  margin-bottom: var(--medium-padding);
 }
 
 .form-row{
@@ -148,4 +155,18 @@ input:focus{
 
 input:invalid{
   border-color: var(--error-color);
+}
+
+.form-submit{
+  padding:0px var(--large-padding);
+}
+
+.submit-btn{
+  padding: 8px var(--medium-padding);
+  color: white;
+  background-color: #596D48;
+  border-radius: 6px;
+  border-width: 0px;
+  box-shadow: 0px 4px 4px -4px black;
+  margin-bottom: var(--small-padding);
 }
